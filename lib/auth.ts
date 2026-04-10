@@ -365,7 +365,7 @@ export default async function ProtectedPage() {
     glowVar: "--passkey-glow",
     steps: [
       "User enters email (or is recognized from existing session)",
-      "Browser prompts for biometric/device authentication",
+      "Browser prompts for device authentication",
       "Device signs a challenge with the private key (never leaves the device)",
       "Descope verifies the signature against the stored public key",
       "Session established. No secret was ever transmitted",
