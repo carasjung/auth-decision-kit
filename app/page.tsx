@@ -207,7 +207,7 @@ export default function Home() {
           aria-label="External links"
         >
           <a
-            href="https://www.descope.com"
+            href="https://docs.descope.com"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors"
@@ -215,7 +215,7 @@ export default function Home() {
             onMouseEnter={(e) => (e.currentTarget.style.color = LINK_BLUE_HOVER)}
             onMouseLeave={(e) => (e.currentTarget.style.color = LINK_BLUE)}
           >
-            Descope
+            Descope Docs
           </a>
           <a
             href="https://github.com/carasjung/auth-decision-kit"

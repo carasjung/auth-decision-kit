@@ -48,9 +48,9 @@ export const METHOD_CONFIGS: Record<AuthMethod, MethodConfig> = {
     glowVar: "--magic-glow",
     steps: [
       "User enters email address",
-      "Descope sends a time-limited email with a signed token",
-      "User clicks the link. Browser completes the OAuth exchange",
-      "Session is established. JWT is issued",
+      "A time-limited email with a signed token is sent to their inbox",
+      "User clicks the link — browser completes the OAuth exchange",
+      "Session is established, JWT is issued",
     ],
     sessionHighlights: [
       {
@@ -203,10 +203,10 @@ export default async function ProtectedPage() {
     glowVar: "--social-glow",
     steps: [
       "User clicks a social provider button (Google, GitHub, etc.)",
-      "OAuth redirect to provider's consent screen",
-      "Provider returns authorization code to Descope callback",
-      "Descope exchanges code for tokens and creates/links user account",
-      "Session is established. JWT issued with provider claims",
+      "OAuth redirect to the provider's consent screen",
+      "Provider returns an authorization code to the auth callback",
+      "Code is exchanged for tokens, user account is created or linked",
+      "Session is established, JWT issued with provider claims",
     ],
     sessionHighlights: [
       {
@@ -364,11 +364,11 @@ export default async function ProtectedPage() {
     accentVar: "--passkey",
     glowVar: "--passkey-glow",
     steps: [
-      "User enters email (or is recognized from existing session)",
+      "User enters email (or is recognized from an existing session)",
       "Browser prompts for device authentication",
-      "Device signs a challenge with the private key (never leaves the device)",
-      "Descope verifies the signature against the stored public key",
-      "Session established. No secret was ever transmitted",
+      "Device signs a challenge with the private key — it never leaves the device",
+      "Signature is verified against the stored public key",
+      "Session established — no secret was ever transmitted",
     ],
     sessionHighlights: [
       {

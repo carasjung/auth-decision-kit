@@ -4,7 +4,7 @@ An interactive playground for understanding which Descope auth method fits your 
 
 Most auth sample apps answer: *"Does auth work?"* This one answers: *"Which auth should I use, and why?"*
 
-**→ [Live demo](https://your-demo-url.vercel.app)**
+**→ [Live demo](https://auth-decision-kit.vercel.app/)**
 
 ---
 
