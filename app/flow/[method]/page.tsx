@@ -79,7 +79,7 @@ export default function FlowPage({
             onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
           >
-            ← back
+            ← Back
           </Link>
           <span style={{ color: "rgba(255,255,255,0.35)" }}>|</span>
           <span className="font-display text-sm font-600" style={{ color: accent }}>

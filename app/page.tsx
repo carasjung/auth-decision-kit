@@ -218,18 +218,7 @@ export default function Home() {
             Descope
           </a>
           <a
-            href="https://docs.descope.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors"
-            style={{ color: LINK_BLUE }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = LINK_BLUE_HOVER)}
-            onMouseLeave={(e) => (e.currentTarget.style.color = LINK_BLUE)}
-          >
-            Docs
-          </a>
-          <a
-            href="https://github.com/descope"
+            href="https://github.com/carasjung/auth-decision-kit"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors"
