@@ -249,7 +249,7 @@ export default function FlowPage({
                           setActiveTab("session");
                         }}
                         onError={(e: CustomEvent) => console.error("Auth error:", e.detail)}
-                        theme="dark"
+                        theme="light"
                       />
                     </div>
                   ) : (
