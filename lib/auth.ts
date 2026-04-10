@@ -49,7 +49,7 @@ export const METHOD_CONFIGS: Record<AuthMethod, MethodConfig> = {
     steps: [
       "User enters email address",
       "A time-limited email with a signed token is sent to their inbox",
-      "User clicks the link — browser completes the OAuth exchange",
+      "User clicks the link; Descope validates the signed token and completes sign-in",
       "Session is established, JWT is issued",
     ],
     sessionHighlights: [
@@ -366,9 +366,9 @@ export default async function ProtectedPage() {
     steps: [
       "User enters email (or is recognized from an existing session)",
       "Browser prompts for device authentication",
-      "Device signs a challenge with the private key — it never leaves the device",
+      "Device signs a challenge with the private key. It never leaves the device",
       "Signature is verified against the stored public key",
-      "Session established — no secret was ever transmitted",
+      "Session established. No secret was ever transmitted",
     ],
     sessionHighlights: [
       {

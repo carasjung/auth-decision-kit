@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syne, JetBrains_Mono, Instrument_Serif } from "next/font/google";
+import { Syne, JetBrains_Mono } from "next/font/google";
 import { AuthProvider } from "@descope/nextjs-sdk";
 import "./globals.css";
 
@@ -13,13 +13,6 @@ const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
   weight: ["400", "500"],
-});
-
-const instrument = Instrument_Serif({
-  subsets: ["latin"],
-  variable: "--font-instrument",
-  weight: ["400"],
-  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -42,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${syne.variable} ${jetbrains.variable} ${instrument.variable} antialiased`}
+        className={`${syne.variable} ${jetbrains.variable} antialiased`}
       >
         <AuthProvider
           projectId={process.env.NEXT_PUBLIC_DESCOPE_PROJECT_ID || ""}
