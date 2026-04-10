@@ -352,7 +352,7 @@ export default async function ProtectedPage() {
       },
     ],
     descope: {
-      flow: "sign-up-or-in",
+      flow: "social-only",
       component: "Descope",
     },
   },
