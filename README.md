@@ -1,6 +1,6 @@
 # Auth Decision Kit
 
-There are plenty of great auth demos that show how things work. This interactive demo focuses on how to choose between them so you choose the best ones for your product context.
+There are plenty of great auth content that show how things work. This interactive demo focuses on how to choose between them so you choose the best ones for your product context.
 
 **→ [Live demo](https://auth-decision-kit.vercel.app/)**
 
