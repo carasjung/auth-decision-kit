@@ -1,8 +1,6 @@
 # Auth Decision Kit
 
-An interactive playground for understanding which Descope auth method fits your product context.
-
-Most auth sample apps answer: *"Does auth work?"* This one answers: *"Which auth should I use, and why?"*
+There are plenty of great auth demos that show how things work. This interactive demo focuses on how to choose between them so you choose the best ones for your product context.
 
 **→ [Live demo](https://auth-decision-kit.vercel.app/)**
 
@@ -10,37 +8,35 @@ Most auth sample apps answer: *"Does auth work?"* This one answers: *"Which auth
 
 ## What it does
 
-The Auth Decision Kit lets you experience three Descope auth flows side-by-side:
+The Auth Decision Kit lets you experience three auth flows side-by-side:
 
 | Method | Best for |
-|---|---|
+| --- | --- |
 | **Magic Link** | Consumer apps, low-friction signups |
 | **Social Login** | Developer tools, PLG products |
 | **Passkey** | Mobile-first apps, high-security contexts |
 
 For each method, you get:
 
-1. **Live auth flow** — authenticate for real using Descope
-2. **Session inspector** — every JWT claim annotated so you know what it means
-3. **Decision matrix** — green/yellow/red ratings across 6 product contexts (consumer, B2B SaaS, fintech, mobile, internal tools, high-security)
-4. **Failure simulator** — trigger each failure mode intentionally and see exactly what Descope returns + what your code should do
-5. **Annotated code** — copy-ready implementation snippets with comments that explain what actually matters
+1. **Live auth flow** — experience the full authentication flow in practice
+2. **Session inspector** — understand every JWT claim with clear annotations
+3. **Decision matrix** — see how each method performs across real product contexts (consumer, B2B SaaS, fintech, mobile, internal tools, high-security)
+4. **Failure simulator** — trigger each failure mode and see how to handle them correctly
+5. **Annotated code** — copy-ready implementation snippets that highlight the decisions behind the implementation
 
 ---
 
 ## Why I built this
 
-I was looking at Descope's sample apps and noticed they all answer the same question: *"Here's how to add auth to your app."*
+Most auth content shows how to implement. But the harder question is deciding which method fits your product.
 
-What's missing is the meta-question developers actually wrestle with: *"Should I use magic links or passkeys for my product? What does the session object look like after each one? What happens when things break?"*
-
-This project is my attempt to answer that. It's an educational artifact as much as a sample app.
+I wanted a decision framework developers could actually use that allowed them to compare methods side by side, show what lands in the session after each flow, and surfaces what breaks and how to handle it. 
 
 ---
 
 ## Stack
 
-- **Next.js 14** (App Router)
+- **Next.js 15** (App Router)
 - **Descope** — auth flows, session management, JWT
 - **Framer Motion** — transitions between tabs and states
 - **Tailwind CSS** — layout and spacing
@@ -50,25 +46,23 @@ This project is my attempt to answer that. It's an educational artifact as much 
 
 ## Getting started
 
+You need **Node.js 18.18+** (20+ recommended for local dev).
+
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/auth-decision-kit.git
+git clone https://github.com/carasjung/auth-decision-kit.git
 cd auth-decision-kit
 npm install
 ```
 
 ### 2. Set up Descope
 
-Create a free account at [descope.com](https://descope.com) and grab your Project ID from [app.descope.com/settings/project](https://app.descope.com/settings/project).
+If you haven't already, create a free account at [descope.com](https://descope.com) and copy your **Project ID** from [app.descope.com/settings/project](https://app.descope.com/settings/project).
 
 ### 3. Configure environment variables
 
-```bash
-cp .env.local.example .env.local
-```
-
-Edit `.env.local`:
+In the project root, create `.env.local` with:
 
 ```env
 NEXT_PUBLIC_DESCOPE_PROJECT_ID=your_project_id_here
@@ -114,7 +108,7 @@ auth-decision-kit/
 │       └── CodeSnippet.tsx         # Annotated implementation code
 ├── lib/
 │   └── auth.ts                     # All method configs — steps, claims, matrix, snippets
-├── .env.local.example
+├── tailwind.config.ts
 └── README.md
 ```
 
@@ -124,12 +118,13 @@ The heart of the project is `lib/auth.ts`. It contains the full configuration fo
 
 ## Deploying to Vercel
 
+From the repo root (no global CLI required):
+
 ```bash
-npm i -g vercel
-vercel
+npx vercel
 ```
 
-Add `NEXT_PUBLIC_DESCOPE_PROJECT_ID` as an environment variable in your Vercel project settings.
+Add `NEXT_PUBLIC_DESCOPE_PROJECT_ID` in your Vercel project **Settings → Environment Variables**.
 
 ---
 
@@ -146,10 +141,9 @@ A few directions if you want to take this further:
 
 ## Related reading
 
-- [Descope Docs](https://docs.descope.com) — full SDK reference
-- [MCP Auth SDKs & APIs](https://www.descope.com/blog/post/mcp-auth-sdk) — Descope's approach to securing MCP servers
-- [The Developer's Guide to MCP Gateways](https://www.descope.com/blog/post/developer-guide-mcp-gateways) — multi-tenant MCP auth patterns
-- [Descope Python MCP SDK](https://www.descope.com/blog/post/python-mcp-sdk) — for Python-based MCP servers
+- [Different Authentication Methods & Choosing the Right One](https://www.descope.com/learn/post/authentication-types)
+- [OAuth 2.0 and OpenID Connect: The evolution from authorization to identity](https://workos.com/blog/oauth-2-0-and-openid-connect-the-evolution-from-authorization-to-identity) 
+- [Introduction to server-side passkey implementation](https://developers.google.com/identity/passkeys/developer-guides/server-introduction) 
 
 ---
 
