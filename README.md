@@ -1,6 +1,8 @@
 # Auth Decision Kit
 
-There are plenty of great auth content that show how things work. This interactive demo focuses on how to choose between them so you choose the best ones for your product context.
+Most auth content shows how to implement. But the harder question is deciding which method fits your product.
+
+I wanted a decision framework developers could actually use that allowed them to compare methods side by side, show what lands in the session after each flow, and surfaces what breaks and how to handle it. 
 
 **→ [Live demo](https://auth-decision-kit.vercel.app/)**
 
@@ -23,14 +25,6 @@ For each method, you get:
 3. **Decision matrix** — see how each method performs across real product contexts (consumer, B2B SaaS, fintech, mobile, internal tools, high-security)
 4. **Failure simulator** — trigger each failure mode and see how to handle them correctly
 5. **Annotated code** — copy-ready implementation snippets that highlight the decisions behind the implementation
-
----
-
-## Why I built this
-
-Most auth content shows how to implement. But the harder question is deciding which method fits your product.
-
-I wanted a decision framework developers could actually use that allowed them to compare methods side by side, show what lands in the session after each flow, and surfaces what breaks and how to handle it. 
 
 ---
 
