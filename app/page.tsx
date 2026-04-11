@@ -63,7 +63,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Built with Descope
+          An Interactive Demo
         </motion.span>
 
         <motion.h1
