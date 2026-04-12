@@ -2,7 +2,7 @@
 
 Most auth content shows how to implement. But the harder question is deciding which method fits your product.
 
-I wanted a decision framework developers could actually use that allowed them to compare methods side by side, show what lands in the session after each flow, and surfaces what breaks and how to handle it. 
+I wanted a hands-on decision framework to compare methods side by side, show what lands in the session after each flow, and surface what breaks and how to handle it.
 
 **→ [Live demo](https://auth-decision-kit.vercel.app/)**
 
